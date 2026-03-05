@@ -3,6 +3,9 @@ const { client, connectRedis } = require("./redisClient");
 const { bookSeat } = require("./booking");
 
 const app = express();
+app.get("/", (req, res) => {
+  res.send("Concurrent Ticket Booking System API is running 🚀");
+});
 app.use(express.json());
 
 const PORT = 3000;
