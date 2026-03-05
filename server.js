@@ -17,6 +17,10 @@ app.post("/api/book", async (req, res) => {
 
     res.json(result);
 });
+app.get("/api/book", async (req, res) => {
+  const result = await bookSeat();
+  res.json(result);
+});
 
 async function startServer() {
 
